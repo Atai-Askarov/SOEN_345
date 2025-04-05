@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.mockito.release.notes.improvements.GitHubTicketFetcherTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-03-28T23:20:32" hostname="LAPTOP-99SVNK69" time="1.15">
+  <properties/>
+  <testcase name="fetches improvements from GitHub" classname="org.mockito.release.notes.improvements.GitHubTicketFetcherTest" time="1.15">
+    <failure message="java.lang.RuntimeException: Problems fetching 4 from GitHub" type="java.lang.RuntimeException">java.lang.RuntimeException: Problems fetching 4 from GitHub
+	at org.mockito.release.notes.improvements.GitHubTicketFetcher.fetchTickets(GitHubTicketFetcher.java:47)
+	at org.mockito.release.notes.improvements.GitHubTicketFetcherTest.fetches improvements from GitHub(GitHubTicketFetcherTest.groovy:17)
+Caused by: java.io.IOException: Server returned HTTP response code: 400 for URL: https://api.github.com/repos/mockito/mockito/issues?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&amp;state=closed&amp;filter=all&amp;direction=desc&amp;page=1
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1967)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1962)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1961)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1531)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1515)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:268)
+	at org.mockito.release.notes.improvements.GitHubTicketFetcher$GitHubIssues.parseJsonFrom(GitHubTicketFetcher.java:149)
+	at org.mockito.release.notes.improvements.GitHubTicketFetcher$GitHubIssues.nextPage(GitHubTicketFetcher.java:135)
+	at org.mockito.release.notes.improvements.GitHubTicketFetcher.fetchTickets(GitHubTicketFetcher.java:40)
+	... 1 more
+Caused by: java.io.IOException: Server returned HTTP response code: 400 for URL: https://api.github.com/repos/mockito/mockito/issues?access_token=a0a4c0f41c200f7c653323014d6a72a127764e17&amp;state=closed&amp;filter=all&amp;direction=desc&amp;page=1
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1917)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1515)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderField(HttpURLConnection.java:3082)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getHeaderField(HttpsURLConnectionImpl.java:305)
+	at org.mockito.release.notes.improvements.GitHubTicketFetcher$GitHubIssues.nextPage(GitHubTicketFetcher.java:130)
+	... 2 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
